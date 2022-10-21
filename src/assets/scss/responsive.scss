@@ -1,0 +1,134 @@
+// Breakpoing XL
+@media (max-width: 1200px) {
+    section {
+        &.section-hero {
+            background-position: center center !important;
+        }
+    }
+}
+
+// Breakpoing LG
+@media (max-width: 992px) {
+    .navbar {
+        position: relative;
+        top: 0;
+        background: #000 !important;
+
+        .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-nav {
+            padding-bottom: 10px;
+
+            .nav-item {
+                .nav-link {
+                    padding: .9rem 0px 0px 0px;
+                    color: #fff;
+
+                    &:hover,
+                    &.active {
+                        color: #01d28e;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        &.section-hero {
+            height: 1150px;
+
+            .overlay {
+                height: 1150px;
+            }
+
+            .slider-text {
+                height: 1150px;
+            }
+        }
+
+        &.section-counter {
+            .overlay {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// Breakpoing MD
+@media (max-width: 768px) { 
+    section{
+        .heading-section {
+            h2 {
+                font-size: 28px;
+            }
+        }
+
+        &.section-featured {
+            .featured-top {
+                .request-form {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                
+                .services-wrap {
+                    border-radius: 0px;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &.section-about {
+            .about-img {
+                height: 600px;
+                margin-bottom: 40px;
+            }
+            
+            &:after{ 
+                width: 100%;
+            }
+        }
+
+        &.section-call-to-action {
+            .overlay {
+                display: none;
+            }
+        }
+
+        &.section-blog {
+            .blog-wrap {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.section-counter {
+            .counter-wrap {
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+    // bs-datepicker-container, bs-daterangepicker-container {
+    //     transform: translate3d(50%, 50%)!important;
+    // }
+
+    #map {
+        height: 300px;
+    }
+}
+
+// Breakpoing SM
+@media (max-width: 576px) { 
+    // section {
+    //     &.section-counter {
+    //         .counter-wrap {
+    //             margin-bottom: 20px;
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,111 @@
+<section class="section-hero hero-child py-0" style="background-image: url('../../../assets/images/bg_3.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-9 pb-5 wow animate__fadeInUp animate__animated">
+                <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
+                                class="ion-ios-arrow-forward"></i></a></span> <span>How It Works <i
+                            class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-3 bread">How It Works</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-about">
+    <div class="container">
+        <div class="row g-0">
+            <div class="about-img col-md-6 p-md-5"
+                style="background-image: url(../../../assets/images/about.jpg);">
+            </div>
+            <div class="col-md-6 wow animate__fadeInUp animate__animated">
+                <div class="heading-section heading-section-white ps-md-5">
+                    <span class="subheading">How it works</span>
+                    <h2 class="mb-4">New way of renting cars</h2>
+
+                    <p>Mobility is very important in ever changing world we live in. Brainstorming inside our team gave
+                        us a fair point: Why mobility and renting cars has to be boring, expensive and a bad
+                        experience? Why not make it fun, simple and extra affordable? That is why we decided to make
+                        an ultimate platform for mobility in south east Europe. Adam enables you to find ideal cars in
+                        any given moment and situation. We bring all local and regional renters to one unified market
+                        which reduces costs, lowers the price and make it mega easy for clients to rent a car. Also, it
+                        enables legit renters to expand their business, raise their income and showcase their cars.</p>
+                    <p><a routerLink="/support" class="btn btn-primary py-3 px-4">Contact us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-call-to-action" style="background-image: url(../../../assets/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 heading-section heading-section-white wow animate__fadeInUp animate__animated">
+                <h2 class="mb-3">Do You Want To Earn With Us? So Don't Be Late.</h2>
+                <a routerLink="/support" class="btn btn-primary btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-testimony bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section wow animate__fadeInUp animate__animated">
+                <span class="subheading">Testimonial</span>
+                <h2 class="mb-3">Happy Clients</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12">
+                <owl-carousel-o [options]="testimoniOwlOptions">
+                    <ng-container *ngFor="let testimony of testimonies; let i = index">
+                        <ng-template carouselSlide>
+                            <app-testimony-widget [testimony]="testimony"></app-testimony-widget>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-counter bg-light">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="60">60</strong>
+                    <span>Year <br>Experienced</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="1090">1990</strong>
+                    <span>Total <br>Cars</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="2590">2590</strong>
+                    <span>Happy <br>Customers</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="67">67</strong>
+                    <span>Total <br>Branches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+

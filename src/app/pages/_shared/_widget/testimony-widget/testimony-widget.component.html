@@ -1,0 +1,10 @@
+<div class="testimony-wrap text-center py-4 pb-5 wow animate__fadeInUp animate__animated">
+    <div class="user-img mb-2"
+        [ngStyle]="{'background-image': 'url('+ testimony['imageURL'] +')'}">
+    </div>
+    <div class="text pt-4">
+        <p class="mb-4">{{testimony['comment']}}</p>
+        <h3>{{testimony['name']}}</h3>
+        <span>{{testimony['position']}}</span>
+    </div>
+</div>

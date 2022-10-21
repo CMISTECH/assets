@@ -1,0 +1,13 @@
+<div class="blog-wrap wow animate__fadeInUp animate__animated"> 
+    <a class="blog-img" routerLink="/blog-details" [ngStyle]="{'background-image': 'url('+ blog['imageURL'] +')'}"></a>
+    <div class="text pt-4">
+        <div class="meta mb-3">
+            <div><a href="#">{{blog['postDate']}}</a></div>
+            <div><a href="#">{{blog['userName']}}</a></div>
+            <div><a href="#" class="meta-chat"><span class="icon-chat pe-1"></span>{{blog['messageCount']}}</a></div>
+        </div>
+        <h3 class="mt-2"><a href="#">{{blog['blogTitle']}}</a></h3>
+        <p class="content">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        <p><a routerLink="/news-details" class="btn btn-primary">Read more</a></p>
+    </div>
+</div>

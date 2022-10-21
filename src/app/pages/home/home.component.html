@@ -1,0 +1,326 @@
+<section class="section-hero bg-degree py-0" data-stellar-background-ratio="0.5">
+    <div class="video_contain">
+        <video #heroVideo id="heroVideo">
+            <source src="../../../assets/videos/intro.MOV" type="video/mp4">
+        </video>
+    </div>    
+
+    <!-- <div class="overlay">
+        <video autoplay="enable" id="heroVideo" loop="" muted="" width="x" height="y"
+            poster="../../../assets/images/hero-video-poster.jpg">
+            <source src="../../../assets/videos/intro.MOV" type="video/mp4">
+        </video>
+    </div> -->
+    
+    <div class="container">
+        <div class="row slider-text align-items-center justify-content-center g-0">
+            <div class="col-lg-8 wow animate__fadeInUp animate__animated">
+                <div class="text-center pb-md-5 mb-md-5 w-100 ">
+                    <h1 class="mb-4">Fast &amp; Easy Way to Rent a Car</h1>
+                    <p>Adam platform is all you need to find & rent your dream car.</p>
+                    <a href="javascript: void(0);" (click)="toggleVideo($event)" class="icon-wrap d-flex align-items-center justify-content-center mt-4">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span [ngClass]="{'ion-ios-play': playingVideo == false,  'ion-ios-pause': playingVideo == true}"></span>
+                        </div>
+                        <div class="heading-title ms-5">
+                            <span>Watch video</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-featured bg-light pt-0">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-12 featured-top">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <form action="#" class="request-form bg-primary w-100 wow animate__fadeInUp animate__animated">
+                            <h2>Make your trip</h2>
+                            
+                            <div class="form-group">
+                                <label for="" class="form-label">Category</label>
+                                <ng-select [searchable]="true" [clearable]="false" placeholder="Economy Rent,  Luxury Rent, etc">
+                                        <ng-option *ngFor="let category of categories" [value]="category.value">
+                                            {{category.name}}</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Pick-up location</label>
+                                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Drop-off location</label>
+                                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group me-2">
+                                    <label for="" class="form-label">Pick-up date</label>
+                                    <input class="form-control" bsDatepicker #pickdate="bsDatepicker" [bsConfig]="{ adaptivePosition: true }" placeholder="Date">
+                                </div>
+                                <div class="form-group ms-2">
+                                    <label for="" class="form-label">Drop-off date</label>
+                                    <input class="form-control" bsDatepicker #dropdate="bsDatepicker" [bsConfig]="{ adaptivePosition: true }" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Pick-up time</label>
+                                <ng-select [searchable]="true" [clearable]="false" placeholder="Time">
+                                        <ng-option *ngFor="let pickupTime of pickupTimes" [value]="pickupTime.value">
+                                            {{pickupTime.name}}</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div class="services-wrap w-100">
+                            <h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
+                            <div class="row d-flex mb-4">
+                                <div class="col-md-4 d-flex align-self-stretch wow animate__fadeInUp animate__animated">
+                                    <div class="services text-center w-100">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                                class="flaticon-route"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="mb-2">Choose Your Pickup Location</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch wow animate__fadeInUp animate__animated">
+                                    <div class="services text-center w-100">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                                class="flaticon-handshake"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="mb-2">Select the Best Deal</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch wow animate__fadeInUp animate__animated">
+                                    <div class="services text-center w-100">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                                class="flaticon-rent"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="mb-2">Reserve Your Rental Car</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-top-picks bg-light pt-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center mb-5 wow animate__fadeInUp animate__animated">
+                <span class="subheading">Explore our cars</span>
+                <h2 class="mb-2">Top Picks</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <owl-carousel-o [options]="featuredCarsOwlOptions">
+                    <ng-container *ngFor="let vehicle of vehicles; let i = index">
+                        <ng-template carouselSlide>
+                            <app-vehicle-widget [vehicle]="vehicle"></app-vehicle-widget>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-about">
+    <div class="container">
+        <div class="row g-0">
+            <div class="about-img col-md-6 p-md-5"
+                style="background-image: url(../../../assets/images/about.jpg);">
+            </div>
+            <div class="col-md-6 wow animate__fadeInUp animate__animated">
+                <div class="heading-section heading-section-white ps-md-5">
+                    <span class="subheading">About ADAM</span>
+                    <h2 class="mb-4">Make new memories with Adam</h2>
+
+                    <p>We are making dreams possible. Find your dream car, ATV or motorcycle and
+                        take it for a ride for an awesome price.</p>
+                    <p>Adam is enabling you to experience new
+                        things with new cars on new locations. Find our partners all over South-east
+                        Europe (Slovenia, Croatia, Bosnia-Herzegovina, Serbia and Montenegro). If you
+                        have interesting cars for rent publish them on our platform and make a business.</p>
+                    <p><a routerLink="/support" class="btn btn-primary py-3 px-4">Contact us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-services">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section wow animate__fadeInUp animate__animated">
+                <span class="subheading">Adam Categories</span>
+                <h2 class="mb-3">Renting categories we offer</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="services text-center w-100">
+                    <div class="icon d-flex align-items-center justify-content-center"><span
+                            class="flaticon-wedding-car"></span></div>
+                    <div class="text w-100">
+                        <h3 class="mb-2">Economy Rent</h3>
+                        <p>Rent affordable and economic cars for your everyday trips and tasks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 text-center w-100">
+                    <div class="icon d-flex align-items-center justify-content-center"><span
+                            class="flaticon-transportation"></span></div>
+                    <div class="text w-100">
+                        <h3 class="mb-2">Luxury Rent</h3>
+                        <p>Find awesome luxury & sport cars in your region and make great
+                            experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 text-center w-100">
+                    <div class="icon d-flex align-items-center justify-content-center"><span
+                            class="flaticon-car"></span></div>
+                    <div class="text w-100">
+                        <h3 class="mb-2">Adrenaline XP</h3>
+                        <p>Get a supercar and a professional driver to take you on a tour in your real
+                            life racing experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 text-center w-100">
+                    <div class="icon d-flex align-items-center justify-content-center"><span
+                            class="flaticon-transportation"></span></div>
+                    <div class="text w-100">
+                        <h3 class="mb-2">VIP</h3>
+                        <p>Rent a luxury car with a professional driver for your trips, weddings and
+                            other special events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-call-to-action" style="background-image: url(../../../assets/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 heading-section heading-section-white wow animate__fadeInUp animate__animated">
+                <h2 class="mb-3">Do You Want To Earn With Us? So Don't Be Late.</h2>
+                <a routerLink="/support" class="btn btn-primary btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-testimony bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section wow animate__fadeInUp animate__animated">
+                <span class="subheading">Testimonial</span>
+                <h2 class="mb-3">Happy Clients</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12">
+                <owl-carousel-o [options]="testimoniOwlOptions">
+                    <ng-container *ngFor="let testimony of testimonies; let i = index">
+                        <ng-template carouselSlide>
+                            <app-testimony-widget [testimony]="testimony"></app-testimony-widget>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-blog">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center wow animate__fadeInUp animate__animated">
+                <span class="subheading">Blog</span>
+                <h2>Recent Blog</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <ng-container *ngFor="let blog of blogs; let i = index">
+                <div class="col-md-4 d-flex ">
+                    <app-blog-widget [blog]="blog"></app-blog-widget>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="section-counter bg-light">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="60">60</strong>
+                    <span>Year <br>Experienced</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="1090">1990</strong>
+                    <span>Total <br>Cars</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="2590">2590</strong>
+                    <span>Happy <br>Customers</span>
+                </div>
+            </div>
+            <div class="counter-wrap col-md-6 col-lg-3 justify-content-center wow animate__fadeInUp animate__animated">
+                <div class="text d-flex align-items-center">
+                    <strong class="number" data-number="67">67</strong>
+                    <span>Total <br>Branches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+
+
+
+
+
+
+
+
+
+
+
