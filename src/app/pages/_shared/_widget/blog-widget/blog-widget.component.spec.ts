@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { BlogWidgetComponent } from './blog-widget.component';
+
+describe('BlogWidgetComponent', () => {
+  let component: BlogWidgetComponent;
+  let fixture: ComponentFixture<BlogWidgetComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ BlogWidgetComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(BlogWidgetComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

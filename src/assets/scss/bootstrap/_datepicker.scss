@@ -1,0 +1,70 @@
+//
+// Datepicker
+//
+
+ngb-datepicker {
+  background-color: #fff;
+  position: absolute;
+  z-index: 1000;
+}
+
+ngb-datepicker-navigation-select>.custom-select {
+  margin: 0 5px;
+}
+
+.ngb-dp-day,
+.ngb-dp-today {
+  outline: none !important;
+
+  .btn-light,
+  .btn-primary {
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 50%;
+  }
+}
+
+.ngb-dp-weekday {
+  font-style: normal !important;
+  display: none !important;
+}
+
+.ngb-tp {
+  box-shadow: 0 .5rem 1rem rgba(#000, .175);
+  background-color: #fff;
+  margin-top: 5px;
+  float: left;
+  min-width: 10rem;
+  padding: 0.75rem;
+  margin: 0.125rem 0 0;
+  font-size: 0.875rem;
+  color: #495057;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border: 0 solid rgba(#000, .15);
+  border-radius: .25rem;
+  position: absolute;
+  z-index: 1000;
+}
+
+// Date Range
+.custom-day {
+  line-height: 2rem;
+  border-radius: 50%;
+  padding: 0 !important;
+  outline: none !important;
+
+  &:hover {
+    background-color: #1089ff !important;
+  }
+
+  &.range {
+    background-color: #1089ff !important;
+  }
+
+  &.range.faded {
+    background-color: lighten(#f6f6f6, 5%) !important;
+    color: #495057 !important;
+  }
+}
